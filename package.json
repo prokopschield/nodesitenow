@@ -1,0 +1,24 @@
+{
+	"name": "nodesitenow",
+	"description": "Create a NodeSite, now.",
+	"version": "0.0.0",
+	"main": "lib/index.js",
+	"bin": {
+		"nodesitenow": "lib/cli.js"
+	},
+	"scripts": {
+		"start": "node lib/cli",
+		"test": "npx nslibmgr test"
+	},
+	"author": "Prokop Schield",
+	"devDependencies": {
+		"@types/mime-types": "^2.1.1",
+		"@types/node": ">=14"
+	},
+	"keywords": [],
+	"license": "GPL-3.0-or-later",
+	"dependencies": {
+		"nodesite.eu-local": "^1.2.1",
+		"nsblob": "^0.2.9"
+	}
+}
