@@ -1,7 +1,7 @@
 {
 	"name": "nodesitenow",
 	"description": "Create a NodeSite, now.",
-	"version": "0.0.0",
+	"version": "0.1.0-1",
 	"main": "lib/index.js",
 	"bin": {
 		"nodesitenow": "lib/cli.js"
@@ -20,5 +20,16 @@
 	"dependencies": {
 		"nodesite.eu-local": "^1.2.1",
 		"nsblob": "^0.2.9"
-	}
+	},
+	"directories": {
+		"lib": "lib"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/prokopschield/nodesitenow.git"
+	},
+	"bugs": {
+		"url": "https://github.com/prokopschield/nodesitenow/issues"
+	},
+	"homepage": "https://github.com/prokopschield/nodesitenow#readme"
 }

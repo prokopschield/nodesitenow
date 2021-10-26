@@ -112,7 +112,8 @@ export async function process_request(
 		const { base: basename } = path_real.parse(p);
 		if (state.preprocessed.has(p))
 			return (
-				state.preprocessed.get(p) || process_request(state, req, root, rel)
+				state.preprocessed.get(p) ||
+				process_request(state, req, root, rel)
 			);
 		let index = rel === '/';
 		if (rel.endsWith('index')) {
@@ -177,5 +178,10 @@ export default async function nodesitenow(
 		if (rel.startsWith('..')) return;
 		else preprocess(state, folder, rel);
 	});
-	return preprocess(state, folder, '');
+	return preprocess(state, folder, '').then(() => ({
+		preprocessed,
+		state,
+		hound,
+		creator,
+	}));
 }
